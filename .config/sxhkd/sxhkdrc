@@ -1,0 +1,20 @@
+# Program launcher
+alt + o
+  rofi -show drun -show-icons
+
+alt + r
+  rofi -show run -show-icons
+
+alt + e 
+  rofi -modi emoji -show emoji
+#rofi -modi "emoji:rofimoji" -show emoji
+
+alt + m + {c,x,b,z,r,s}
+  cmus-remote -{u,p,n,r,R,S}
+
+alt + {k,l}
+  cmus-remote -v {-1%,+1%}
+
+ctrl + alt + r
+  kitty
+

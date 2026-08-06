@@ -1,0 +1,75 @@
+colorscheme gruvbox
+colorscheme itunes-theme
+colorscheme cyan
+colorscheme amazon
+colorscheme default
+add -p ~/Music/All Music/
+add Music/All Music/Nasheed/
+q
+M
+t
+search-start
+add ~/Music/no-lyrics/
+save -l
+save -p
+:save -p
+:save =p
+a -p ~/Music/no-lyrics/Amur Waves.opus
+ ~/Music/no-lyrics/Amur Waves.opus
+add -l ~/Music/no-lyrics/Amur Waves.opus
+add ~/Music/no-lyrics/Amur Waves.opus Songs
+select
+add ~/Music/no-lyrics/Amur Waves.opus
+add A Little Birch Tree.opus
+ad
+add
+win-half-page-down
+pl-import 
+U
+wq
+set output_plugin=jack
+set output=jack
+F
+f
+follow
+a ~/Music/All Music/
+a "~/Music/All Music/"
+live-filter 
+pl-import ~/Music/All Music/
+pl-import ~/Music/All Music
+pl-import
+a ~/Music/All \Music/
+a ~/Music/All Music
+pl-create Songs
+add ~/Music
+w
+pl-create
+pl-save
+save
+pl-rename "All-Music"
+pl-rename "All Music"
+pl-rename
+rename
+r
+/tame
+set color_win_cur_attr=blink
+set color_win_cur_attr=standout
+f Music
+1
+colourscheme itunes-theme
+a ~/Music/ All Music
+a
+set status_display_program=$HOME/.config/cmus/cmus-cover-art/observe.sh
+set status_display_program=~/.config/cmus/cmus-cover-art/observe.sh
+set status_display_program=~/cmus/cmus-cover-art/observe.sh
+colorscheme itune-theme
+s
+a ~/Music
+a ~/Music/All /Music
+2
+add ~/Music/All /music
+a ~Music
+:a ~/Music/All /Music
+Playlist view
+set shuffle=tracks
+set shuffle=track
