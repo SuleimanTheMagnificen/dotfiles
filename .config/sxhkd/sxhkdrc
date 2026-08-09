@@ -15,6 +15,6 @@ alt + m + {c,x,b,z,r,s}
 alt + {k,l}
   cmus-remote -v {-1%,+1%}
 
-ctrl + alt + r
+ctrl + shift + o
   kitty
 
