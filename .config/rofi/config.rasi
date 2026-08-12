@@ -24,6 +24,6 @@ configuration {
 
 // theme image (image height is set via y-padding)
 inputbar {
-    background-image:            url("~/dotfiles/.config/rofi/images/night city.png", width);
+    background-image:            url("~/dotfiles/.config/rofi/images/planets.png", width);
     padding:                     75px 60px;
 }

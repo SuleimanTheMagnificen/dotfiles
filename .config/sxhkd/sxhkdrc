@@ -1,12 +1,12 @@
 # Program launcher
-alt + o
-  rofi -show drun -show-icons
+#alt + o
+#  rofi -show drun -show-icons
 
-alt + r
-  rofi -show run -show-icons
+ctrl + shift + r
+  rofi -combi-modi window,drun,ssh,emoji -icon-theme "Papirus" -show-icons -show combi
 
-alt + e 
-  rofi -modi emoji -show emoji
+#alt + e 
+#  rofi -modi emoji -show emoji
 #rofi -modi "emoji:rofimoji" -show emoji
 
 alt + m + {c,x,b,z,r,s}
@@ -16,5 +16,4 @@ alt + {k,l}
   cmus-remote -v {-1%,+1%}
 
 ctrl + shift + o
-  kitty
-
+  alacritty

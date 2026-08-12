@@ -1,12 +1,6 @@
-colorscheme gruvbox
-colorscheme itunes-theme
-colorscheme cyan
-colorscheme amazon
-colorscheme default
-add -p ~/Music/All Music/
-add Music/All Music/Nasheed/
 q
 M
+add ~/Music/All Music/
 t
 search-start
 add ~/Music/no-lyrics/
@@ -51,6 +45,7 @@ pl-rename "All Music"
 pl-rename
 rename
 r
+colorscheme itunes-theme
 /tame
 set color_win_cur_attr=blink
 set color_win_cur_attr=standout

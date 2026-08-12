@@ -64,4 +64,6 @@ vim.diagnostic.config({
       [severity.INFO] = " ",
     },
   },
-})
+})d on the VeryLazy event
+ set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+
