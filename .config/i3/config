@@ -163,6 +163,9 @@ bindsym $Mod+Shift+9 move container to workspace number $ws9
 bindsym $Mod+Shift+0 move container to workspace number $ws10
 bindsym $Mod+comma workspace prev
 bindsym $Mod+period workspace next
+# Custom: Move to containers to next or previous workspaces
+bindsym $Mod+Shift+comma move container to workspace prev
+bindsym $Mod+Shift+period move container to workspace next 
 # reload the configuration file
 bindsym $Mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -196,12 +199,22 @@ mode "resize" {
 }
 
 bindsym $Mod+r mode "resize"
+bindsym $mod+Shift+S sticky enable
 
 # Window Customisations
 hide_edge_borders smart
 default_border none
 gaps inner 10
-gaps outer 15
+gaps outer 10
+
+# Specific window properties
+for_window [class="(?i)copyq"] floating enable, resize set 480 160
+for_window [class="(?i)vlc"] floating enable, resize set 640 480
+for_window [class="(?i)steam"] floating enable, resize set 640 480
+for_window [title="(?i)Picture-in-Picture"] sticky enable 
+for_window [class="(?i)xdg-desktop-portal-gtk"] floating enable, move absolute position center, resize set 640 480
+
+# Application Keybind
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -224,8 +237,7 @@ exec_always --no-startup-id picom -b
 exec_always --no-startup-id sxhkd &
 exec_always --no-startup-id flameshot &
 exec_always --no-startup-id dunst &
-#exec_always --no-startup-id killall polybar
-#exec_always polybar
+exec_always --no-startup-id copyq &
 exec_always --no-startup-id sh ~/.config/polybar/launch_start.sh
 exec_always --no-startup-id ibus-daemon -rxRd
 exec_always feh --bg-fill ~/dotfiles/.config/assets/wallhaven-5y5537.png

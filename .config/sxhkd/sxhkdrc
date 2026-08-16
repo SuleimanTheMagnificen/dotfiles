@@ -3,17 +3,22 @@
 #  rofi -show drun -show-icons
 
 ctrl + shift + r
-  rofi -combi-modi window,drun,ssh,emoji -icon-theme "Papirus" -show-icons -show combi
+  rofi -icon-theme "Gruvbox Plus Dark" -show-icons -show
 
-#alt + e 
-#  rofi -modi emoji -show emoji
-#rofi -modi "emoji:rofimoji" -show emoji
+ctrl + shift + e
+  rofi -show emoji
+
+ctrl + shift + w
+  rofi -show window
 
 alt + m + {c,x,b,z,r,s}
   cmus-remote -{u,p,n,r,R,S}
 
 alt + {k,l}
   cmus-remote -v {-1%,+1%}
+
+alt + q
+  copyq show Zwis\&chenablage
 
 ctrl + shift + o
   alacritty

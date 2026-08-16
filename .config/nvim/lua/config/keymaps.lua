@@ -4,6 +4,7 @@
 
 -- Grep Integration --
 local builtin = require("telescope.builtin")
+local conform = require("conform")
 local file_ignore_patterns = {
   "yarn%.lock",
   "node_modules/",
@@ -20,6 +21,7 @@ local file_ignore_patterns = {
 vim.keymap.set("n", "<leader>sf", function()
   builtin.find_files({
     file_ignore_patterns = file_ignore_patterns,
+    follow = true,
   })
 end, { desc = "[S]earch by [F]inding a word" })
 
@@ -27,7 +29,6 @@ vim.keymap.set("n", "<leader>fs", function()
   builtin.live_grep({ search = vim.fn.input("Grep > ") })
 end, { desc = "Telescope find words in files" })
 
-local conform = require("conform")
 vim.keymap.set({ "n", "v" }, "<leader>mp", function()
   conform.format({
     lsp_fallback = true,
@@ -64,6 +65,4 @@ vim.diagnostic.config({
       [severity.INFO] = " ",
     },
   },
-})d on the VeryLazy event
- set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
-
+})
