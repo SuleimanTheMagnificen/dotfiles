@@ -53,7 +53,6 @@ floating_modifier $Mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-bindsym $Mod+c exec flameshot gui
 # start a terminal
 bindsym $Mod+Return exec launch sh -c "tmux attach || tmux new-session"
 
@@ -164,8 +163,8 @@ bindsym $Mod+Shift+0 move container to workspace number $ws10
 bindsym $Mod+comma workspace prev
 bindsym $Mod+period workspace next
 # Custom: Move to containers to next or previous workspaces
-bindsym $Mod+Shift+comma move container to workspace prev
-bindsym $Mod+Shift+period move container to workspace next 
+bindsym $Mod+Shift+comma move container to workspace prev, workspace prev
+bindsym $Mod+Shift+period move container to workspace next, workspace next
 # reload the configuration file
 bindsym $Mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -200,10 +199,13 @@ mode "resize" {
 
 bindsym $Mod+r mode "resize"
 bindsym $mod+Shift+S sticky enable
+bindsym $mod+Print exec spectacle
+#bindsym $Mod+c exec flameshot gui
 
 # Window Customisations
 hide_edge_borders smart
 default_border none
+default_floating_border none
 gaps inner 10
 gaps outer 10
 
@@ -213,6 +215,7 @@ for_window [class="(?i)vlc"] floating enable, resize set 640 480
 for_window [class="(?i)steam"] floating enable, resize set 640 480
 for_window [title="(?i)Picture-in-Picture"] sticky enable 
 for_window [class="(?i)xdg-desktop-portal-gtk"] floating enable, move absolute position center, resize set 640 480
+for_window [class="(?i)Msgcompose"] floating enable, move absolute position center, resize set 720 640
 
 # Application Keybind
 
@@ -235,7 +238,7 @@ for_window [class="(?i)xdg-desktop-portal-gtk"] floating enable, move absolute p
 #exec_always i3-config-wizard
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id sxhkd &
-exec_always --no-startup-id flameshot &
+# exec_always --no-startup-id flameshot &
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id copyq &
 exec_always --no-startup-id sh ~/.config/polybar/launch_start.sh

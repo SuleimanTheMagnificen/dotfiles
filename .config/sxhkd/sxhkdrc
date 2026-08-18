@@ -1,6 +1,4 @@
 # Program launcher
-#alt + o
-#  rofi -show drun -show-icons
 
 ctrl + shift + r
   rofi -icon-theme "Gruvbox Plus Dark" -show-icons -show
@@ -21,4 +19,4 @@ alt + q
   copyq show Zwis\&chenablage
 
 ctrl + shift + o
-  alacritty
+  kitty
