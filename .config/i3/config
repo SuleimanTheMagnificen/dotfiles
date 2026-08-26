@@ -215,7 +215,10 @@ for_window [class="(?i)vlc"] floating enable, resize set 640 480
 for_window [class="(?i)steam"] floating enable, resize set 640 480
 for_window [title="(?i)Picture-in-Picture"] sticky enable 
 for_window [class="(?i)xdg-desktop-portal-gtk"] floating enable, move absolute position center, resize set 640 480
-for_window [class="(?i)Msgcompose"] floating enable, move absolute position center, resize set 720 640
+for_window [class="(?i)zoom"] floating enable 
+for_window [class="(?i)spectacle"] floating enable 
+for_window [instance="(?i)Msgcompose"] floating enable, move absolute position center, resize set 720 640
+for_window [window_type="^(?i)(?!normal).*"] floating enabled
 
 # Application Keybind
 
@@ -236,9 +239,9 @@ for_window [class="(?i)Msgcompose"] floating enable, move absolute position cent
 # Please remove the following exec line:
 #######################################################################
 #exec_always i3-config-wizard
+#exec_always --no-startup-id flameshot &
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id sxhkd &
-# exec_always --no-startup-id flameshot &
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id copyq &
 exec_always --no-startup-id sh ~/.config/polybar/launch_start.sh
